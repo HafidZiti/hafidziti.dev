@@ -40,12 +40,12 @@ export const LandingPage = () => {
               initial={{ x: -300 }}
               animate={{ x: 0, transition: { type: "spring" } }}
             >
-              <Heading size={"3xl"}>Hi, I'm Hafid ZITI.</Heading>
+              <Heading size={"3xl"}>Hi, I&apos;m Hafid ZITI.</Heading>
               <Text mt={1}>
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book. It has survived
-                not only five centuries, b
+                Lorem Ipsum has been the industry&apos;s standard dummy text
+                ever since the 1500s, when an unknown printer took a galley of
+                type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, b
               </Text>
               <HStack mt={2}>
                 <motion.div

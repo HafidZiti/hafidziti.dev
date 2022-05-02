@@ -1,4 +1,4 @@
-import { Link as ChakraLink, Text, SimpleGrid, Box } from "@chakra-ui/react";
+import { Text, SimpleGrid, Box } from "@chakra-ui/react";
 import { Hero } from "../components/Hero";
 import { Footer } from "../components/Footer";
 import { Container } from "../components/Container";

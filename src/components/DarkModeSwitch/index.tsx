@@ -1,5 +1,5 @@
 import { HTMLMotionProps, motion, Variants } from "framer-motion";
-import { useColorMode, Switch, BoxProps, Box, Center } from "@chakra-ui/react";
+import { useColorMode, BoxProps, Box, Center } from "@chakra-ui/react";
 
 type Merge<P, T> = Omit<P, keyof T> & T;
 type MotionBoxProps = Merge<BoxProps, HTMLMotionProps<"div">>;
