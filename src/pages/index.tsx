@@ -1,5 +1,4 @@
 import { Text, SimpleGrid, Box } from "@chakra-ui/react";
-import { Hero } from "../components/Hero";
 import { Footer } from "../components/Footer";
 import { Container } from "../components/Container";
 import { Card } from "../components/Card";
@@ -37,7 +36,6 @@ const Index = () => (
         <Card experience={expec_mock} />
         <Card experience={expec_mock} />
       </SimpleGrid>
-      <Hero />
       {/* <Main>
         <Text>
           Example repository of <Code>Next.js</Code> + <Code>chakra-ui</Code> +{" "}
