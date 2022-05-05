@@ -5,7 +5,7 @@ type Merge<P, T> = Omit<P, keyof T> & T;
 type MotionBoxProps = Merge<BoxProps, HTMLMotionProps<"div">>;
 export const MotionBox: React.FC<MotionBoxProps> = motion(Box);
 
-export const DarkModeSwitch = () => {
+export const DarkModeSwitch: React.FC = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const size = 15;
 
@@ -101,7 +101,7 @@ export const DarkModeSwitch = () => {
             height={`${size * 0.06}px`}
             borderRadius="50%"
             background="white"
-            key="circle-2"
+            key="circle-1"
             variants={childVariants}
           ></MotionBox>
           <MotionBox
@@ -136,7 +136,7 @@ export const DarkModeSwitch = () => {
             width={`${size * 0.1}px`}
             height={`${size * 0.1}px`}
             background="white"
-            key="circle-1"
+            key="circle-2"
             variants={childVariants}
           ></MotionBox>
           <MotionBox
@@ -147,7 +147,7 @@ export const DarkModeSwitch = () => {
             height={`${size * 0.08}px`}
             borderRadius="50%"
             background="white"
-            key="circle-2"
+            key="circle-3"
             variants={childVariants}
           ></MotionBox>
           <motion.div

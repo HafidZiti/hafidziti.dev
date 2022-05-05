@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
-export const LandingPage = () => {
+export const LandingPage: React.FC = () => {
   const { colorMode } = useColorMode();
 
   return (
@@ -24,7 +24,7 @@ export const LandingPage = () => {
       }
       bgRepeat="no-repeat"
     >
-      <Container pt={36} pb={28} maxW="container.xl" centerContent>
+      <Container pt={{ base: 20, sm: 36 }} pb={28} maxW="6xl" centerContent>
         <Flex
           flexDir={{ base: "column", sm: "row" }}
           // border={"1px"}
@@ -34,12 +34,8 @@ export const LandingPage = () => {
             flex={1}
             // border={"1px"}
             mr={{ base: 0, sm: 10 }}
-            mb={{ base: 16, sm: 0 }}
           >
-            <motion.div
-              initial={{ x: -300 }}
-              animate={{ x: 0, transition: { type: "spring" } }}
-            >
+            <motion.div initial={{ x: -300 }} whileInView={{ x: 0 }}>
               <Heading size={"3xl"}>Hi, I&apos;m Hafid ZITI.</Heading>
               <Text mt={1}>
                 Lorem Ipsum has been the industry&apos;s standard dummy text
@@ -98,12 +94,10 @@ export const LandingPage = () => {
             flex={1}
             flexShrink={"unset"}
             flexGrow={1}
+            // border={"1px"}
             ml={{ base: 0, sm: 10 }}
           >
-            <motion.div
-              initial={{ x: 300 }}
-              animate={{ x: 0, transition: { type: "spring" } }}
-            >
+            <motion.div initial={{ x: 300 }} whileInView={{ x: 0 }}>
               <Image
                 src="/landing-page-illustration.svg"
                 alt="illustration"

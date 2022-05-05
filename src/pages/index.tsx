@@ -1,10 +1,13 @@
-import { Text, SimpleGrid, Box } from "@chakra-ui/react";
+import { Text, SimpleGrid, Box, Container } from "@chakra-ui/react";
 import { Footer } from "../components/Footer";
-import { Container } from "../components/Container";
 import { Card } from "../components/Card";
 import { Experience } from "../types/experience";
 import { NavBar } from "../components/NavBar";
 import { LandingPage } from "../components/LandingPage";
+import { Skills } from "../components/Skills";
+import React from "react";
+import { Skill } from "../types/skill";
+import { Quote } from "../components/Quote";
 
 const expec_mock: Experience = {
   title: "React.js developer",
@@ -24,50 +27,74 @@ const expec_mock: Experience = {
   link: "ss",
 };
 
-const Index = () => (
+const expec_mock2: Experience = {
+  title: "React.js developer",
+  description:
+    "Lorem Ipsum is simply dummyorem Ipsum has been ty text ever since the 1500s, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+  image:
+    "https://programadoresbrasil.com.br/wp-content/uploads/2020/10/ibm.1.png",
+  period: "March, 2020 - March, 2022",
+  color: "pink",
+  technos: [
+    { name: "React.js", logo: "react" },
+    { name: "Apollo client", logo: "apollo" },
+    { name: "Carbon", logo: "" },
+    { name: "Jest", logo: "" },
+    { name: "React Testing Library", logo: "" },
+  ],
+  link: "ss",
+};
+
+const skills_mock: Skill[] = [
+  {
+    name: "React.js",
+    level: 90,
+  },
+  {
+    name: "Angular2+",
+    level: 60,
+  },
+  {
+    name: "Javascript es6",
+    level: 90,
+  },
+  {
+    name: "Next.js",
+    level: 90,
+  },
+  {
+    name: "Node.js",
+    level: 70,
+  },
+];
+
+const Index: React.ReactNode = () => (
   <>
     <NavBar></NavBar>
-    <Container as="main">
+    <Container as="main" maxW="100%" p={0} centerContent>
       <LandingPage />
-      <SimpleGrid columns={[1, null, 3]} spacing="40px" my={10} mx={10}>
-        <Card experience={expec_mock} />
-        <Card experience={expec_mock} />
-        <Card experience={expec_mock} />
-        <Card experience={expec_mock} />
-        <Card experience={expec_mock} />
-      </SimpleGrid>
-      {/* <Main>
-        <Text>
-          Example repository of <Code>Next.js</Code> + <Code>chakra-ui</Code> +{" "}
-          <Code>TypeScript</Code>.
-        </Text>
-   
-        <List spacing={3} my={0}>
-          <ListItem>
-            <ListIcon as={CheckCircleIcon} color="green.500" />
-            <ChakraLink
-              isExternal
-              href="https://chakra-ui.com"
-              flexGrow={1}
-              mr={2}
-            >
-              Chakra UI <LinkIcon />
-            </ChakraLink>
-          </ListItem>
-          <ListItem>
-            <ListIcon as={CheckCircleIcon} color="green.500" />
-            <ChakraLink isExternal href="https://nextjs.org" flexGrow={1} mr={2}>
-              Next.js <LinkIcon />
-            </ChakraLink>
-          </ListItem>
-        </List>
-      </Main> */}
+      <Container maxW="6xl" centerContent>
+        <Box id="projects">
+          <SimpleGrid columns={[1, 2, 3]} spacingX={12}>
+            <Card experience={expec_mock} />
+            <Card experience={expec_mock2} />
+            <Card experience={expec_mock} />
+            <Card experience={expec_mock} />
+            <Card experience={expec_mock} />
+          </SimpleGrid>
+        </Box>
+        <Box id="skills">
+          <Skills skills={skills_mock}></Skills>
+        </Box>
 
-      <Footer>{/* <Text>Made with ❤️ by Hafid</Text> */}</Footer>
+        <Box id="quote">
+          <Quote></Quote>
+        </Box>
 
-      <Box id="skills">
-        <Text> here is my skill</Text>
-      </Box>
+        <Footer>
+          <Text fontSize={"sm"}>Made with ❤️+☕ by hafid</Text>
+        </Footer>
+      </Container>
     </Container>
   </>
 );

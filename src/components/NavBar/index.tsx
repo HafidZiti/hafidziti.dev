@@ -14,10 +14,12 @@ import Hamburger from "hamburger-react";
 import { DarkModeSwitch } from "../DarkModeSwitch";
 import styles from "./navbar.module.css";
 
-export const NavBar = () => {
+type LinkType = { route: string; name: string };
+
+export const NavBar: React.FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const handleToggle = () => (isOpen ? onClose() : onOpen());
-  const links: { route: string; name: string }[] = [
+  const handleToggle = (): void => (isOpen ? onClose() : onOpen());
+  const links: LinkType[] = [
     {
       name: "Projects",
       route: "projects",
@@ -32,14 +34,14 @@ export const NavBar = () => {
     },
   ];
 
-  const _handleLinkOnClick = () => {
+  const _handleLinkOnClick = (): void => {
     if (isOpen) handleToggle();
   };
 
   const _renderNavBarLinks = (): React.ReactNode => {
     // Color Schemes for Link are not implemented in the default theme.
     // You can extend the theme to implement them.
-    return links.map((link, index) => (
+    return links.map((link: LinkType, index: number) => (
       <Link
         key={index}
         as={reactLink}
@@ -108,7 +110,7 @@ export const NavBar = () => {
               initial={{ x: 100 }}
               animate={{ x: 0, transition: { type: "spring" } }}
               exit={{ x: 200, transition: { type: "spring" } }}
-              style={{ position: "fixed", top: "4rem", right: "8.5rem" }}
+              style={{ position: "fixed", top: "4rem", right: "7.35rem" }}
             >
               <VStack
                 pos={"fixed"}
