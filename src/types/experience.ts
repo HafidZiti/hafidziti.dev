@@ -1,4 +1,4 @@
-type Techno = {
+export type Techno = {
   name: string;
   logo: string;
 };
