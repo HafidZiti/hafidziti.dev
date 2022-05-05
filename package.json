@@ -18,10 +18,12 @@
     "@chakra-ui/theme-tools": "1.1.2",
     "@emotion/react": "11.1.5",
     "@emotion/styled": "11.1.5",
+    "chart.js": "^3.7.1",
     "framer-motion": "^6.3.3",
     "hamburger-react": "^2.5.0",
     "next": "latest",
     "react": "^17.0.2",
+    "react-chartjs-2": "^4.1.0",
     "react-dom": "^17.0.2",
     "react-scroll": "^1.8.7"
   },
