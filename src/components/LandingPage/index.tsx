@@ -35,7 +35,10 @@ export const LandingPage: React.FC = () => {
             // border={"1px"}
             mr={{ base: 0, sm: 10 }}
           >
-            <motion.div initial={{ x: -300 }} whileInView={{ x: 0 }}>
+            <motion.div
+              initial={{ x: -300 }}
+              animate={{ x: 0, transition: { type: "spring" } }}
+            >
               <Heading size={"3xl"}>Hi, I&apos;m Hafid ZITI.</Heading>
               <Text mt={1}>
                 Lorem Ipsum has been the industry&apos;s standard dummy text
@@ -97,7 +100,10 @@ export const LandingPage: React.FC = () => {
             // border={"1px"}
             ml={{ base: 0, sm: 10 }}
           >
-            <motion.div initial={{ x: 300 }} whileInView={{ x: 0 }}>
+            <motion.div
+              initial={{ x: 300 }}
+              animate={{ x: 0, transition: { type: "spring" } }}
+            >
               <Image
                 src="/landing-page-illustration.svg"
                 alt="illustration"
