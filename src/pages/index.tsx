@@ -8,6 +8,7 @@ import { Skills } from "../components/Skills";
 import React from "react";
 import { Skill } from "../types/skill";
 import { Quote } from "../components/Quote";
+import { Contact } from "../components/Contact";
 
 const expec_mock: Experience = {
   title: "React.js developer",
@@ -84,13 +85,14 @@ const Index: React.ReactNode = () => (
           </SimpleGrid>
         </Box>
         <Box id="skills">
-          <Skills skills={skills_mock}></Skills>
+          <Skills skills={skills_mock} />
         </Box>
-
         <Box id="quote">
-          <Quote></Quote>
+          <Quote />
         </Box>
-
+        <Box>
+          <Contact />
+        </Box>
         <Footer>
           <Text fontSize={"sm"}>Made with ❤️+☕ by hafid</Text>
         </Footer>
