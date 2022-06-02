@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Box, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  SimpleGrid,
+  Stack,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import {
   Chart as ChartJS,
   RadialLinearScale,
@@ -11,17 +19,19 @@ import {
 } from "chart.js";
 import type { ChartData, ChartOptions } from "chart.js";
 import { Radar } from "react-chartjs-2";
-import { Skill } from "../../types/skill";
+import { MainSkill, Skill } from "../../types/skill";
+import { SkillItem } from "../SkillItem";
 
-type Props = {
+type skillsProps = {
   skills: Skill[];
+  mainSkills: MainSkill[];
 };
 
 const dataTemplate: ChartData<"radar"> = {
   labels: [],
   datasets: [
     {
-      label: "# of Votes",
+      label: "", // label to display as the legend of the chart, it'll be also displayed in the tooltip
       data: [],
       backgroundColor: "rgba(34, 202, 236, .1)",
       borderColor: "rgba(34, 202, 236, 1)",
@@ -38,14 +48,18 @@ ChartJS.register(
   Legend
 );
 
-export const Skills: React.FC<Props> = ({ skills }: Props) => {
+export const Skills: React.FC<skillsProps> = (props: skillsProps) => {
+  const { skills, mainSkills } = props;
+
   const [data] = useState({
     ...dataTemplate,
-    lables: (dataTemplate.labels = skills.map((skill: Skill) => skill.name)),
+    lables: (dataTemplate.labels = mainSkills.map(
+      (mSkill: MainSkill) => mSkill.name
+    )),
     datasets: [
       {
         ...dataTemplate.datasets[0],
-        data: skills.map((skill: Skill) => skill.level),
+        data: mainSkills.map((mSkill: MainSkill) => mSkill.level),
       },
     ],
   });
@@ -60,7 +74,7 @@ export const Skills: React.FC<Props> = ({ skills }: Props) => {
     responsive: true,
     plugins: {
       legend: {
-        display: true,
+        display: false,
         labels: {
           color: `${color} .9)`,
         },
@@ -93,17 +107,58 @@ export const Skills: React.FC<Props> = ({ skills }: Props) => {
   };
 
   return (
-    <Box
-      pt={10}
-      width={{ base: "350px", sm: "500px", md: "600px", lg: "700px" }}
-    >
-      {"i'm the section of skills "}
-      {skills.map((skill: Skill) => (
-        <span key={skill.name}>
-          {skill.name} - {skill.level}
-        </span>
-      ))}
-      <Radar data={data} options={customizedOptions} />
-    </Box>
+    <>
+      <Heading size={"xl"} textAlign={"left"}>
+        Skills
+      </Heading>
+      <Stack
+        mt={10}
+        spacing={10}
+        direction={{ base: "column", sm: "row" }}
+        justifyContent={"space-between"}
+      >
+        <Box>
+          <Text>
+            Technology I&apos;ve worked &{" "}
+            <Text as="span" color="gray.500">
+              dabbled
+            </Text>{" "}
+            with:
+          </Text>
+          <SimpleGrid
+            columns={{ base: 2, sm: 3 }}
+            spacing="6"
+            p="5"
+            pl="0"
+            textAlign="center"
+            alignSelf={"start"}
+          >
+            {skills.map((skill: Skill, index: number) => {
+              return (
+                <SkillItem
+                  key={index}
+                  name={skill.name}
+                  Icon={skill.Icon}
+                  dabbled={skill.dabbled}
+                />
+              );
+            })}
+          </SimpleGrid>
+        </Box>
+        <motion.div
+          initial={{ scale: 0.5 }}
+          whileInView={{ scale: 1 }}
+          animate={{ transition: { type: "spring", duration: 0.1 } }}
+        >
+          <Text>Main skill set 🚀</Text>
+          <Box
+            pt={0}
+            width={{ base: "350px", sm: "300px", md: "400px", lg: "500px" }}
+          >
+            <Radar data={data} options={customizedOptions} />
+          </Box>
+        </motion.div>
+      </Stack>
+    </>
   );
 };
