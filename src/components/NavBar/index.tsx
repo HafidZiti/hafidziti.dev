@@ -55,6 +55,7 @@ export const NavBar: React.FC = () => {
         borderRadius={"lg"}
         color={useColorModeValue("gray.800", "white")}
         onClick={_handleLinkOnClick}
+        offset={-75}
       >
         {link.name}
       </Link>
