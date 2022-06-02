@@ -17,7 +17,7 @@
     "@chakra-ui/react": "^1.4.2",
     "@chakra-ui/theme-tools": "1.1.2",
     "@emotion/react": "11.9.0",
-    "@emotion/styled": "11.1.5",
+    "@emotion/styled": "11.8.1",
     "chart.js": "^3.7.1",
     "framer-motion": "^6.3.3",
     "hamburger-react": "^2.5.0",
