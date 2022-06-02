@@ -1,125 +1,83 @@
 import {
-  AlertStatus,
-  Button,
-  FormControl,
-  FormErrorMessage,
-  FormHelperText,
-  FormLabel,
-  Input,
+  Box,
+  Heading,
+  HStack,
+  Link,
   Stack,
-  Textarea,
-  useToast,
+  Text,
+  VStack,
 } from "@chakra-ui/react";
-import { useForm } from "react-hook-form";
+import { motion } from "framer-motion";
+import { Social } from "../../types/social";
+import { ContactForm } from "./form";
+import { Socials } from "../Socials";
 
-type FormData = {
-  name: string;
-  email: string;
-  message: string;
+type contactProps = {
+  socials: Social[];
 };
 
-export const Contact: React.FC = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isValid },
-    reset,
-  } = useForm<FormData>({
-    mode: "onBlur",
-    defaultValues: {
-      name: "",
-      email: "",
-      message: "",
-    },
-  });
-
-  const toast = useToast();
-
-  const _renderToast = (title: string, status: AlertStatus) => {
-    return toast({
-      title,
-      status,
-      position: "top",
-      variant: "top-accent",
-      isClosable: true,
-    });
-  };
-
-  const submitForm = (data: FormData) => {
-    if (!isValid) return;
-    fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    }).then((res: Response) => {
-      if (res.status === 200) {
-        _renderToast("Your message has been successfully sent.", "success");
-        reset();
-      } else {
-        _renderToast("Sorry, something went wrong. Please try again.", "error");
-      }
-    });
-  };
-
+export const Contact: React.FC<contactProps> = (props: contactProps) => {
   return (
-    <form onSubmit={handleSubmit((data: FormData) => submitForm(data))}>
-      <Stack spacing={4}>
-        <FormControl isInvalid={!!errors.name} isRequired>
-          <FormLabel htmlFor="name">Name</FormLabel>
-          <Input {...register("name", { required: true })} />
-          {!errors.name && (
-            <FormErrorMessage>Name is required.</FormErrorMessage>
-          )}
-        </FormControl>
-
-        <FormControl isInvalid={!!errors.email} isRequired>
-          <FormLabel htmlFor="email">Email</FormLabel>
-          <Input
-            type={"email"}
-            {...register("email", {
-              required: true,
-              pattern: {
-                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                message: "Invalid email address.",
-              },
-            })}
-          />
-          {!errors.email ? (
-            <FormHelperText>
-              Enter the email youd like to receive the response on.{" "}
-              {errors.email}
-            </FormHelperText>
-          ) : errors.email?.type === "required" ? (
-            <FormErrorMessage>Email is required. </FormErrorMessage>
-          ) : (
-            <FormErrorMessage>{errors.email?.message}</FormErrorMessage>
-          )}
-        </FormControl>
-
-        <FormControl isInvalid={!!errors.message} isRequired>
-          <FormLabel htmlFor="message">Message</FormLabel>
-          <Textarea size="sm" {...register("message", { required: true })} />
-          {!errors.message && (
-            <FormErrorMessage>message is required.</FormErrorMessage>
-          )}
-        </FormControl>
-
-        <Button
-          colorScheme="blue"
-          bg="blue.400"
-          color="white"
-          _hover={{
-            bg: "blue.500",
-          }}
-          isFullWidth
-          type="submit"
+    <>
+      <Heading size={"xl"} textAlign={"left"}>
+        Contact me!
+      </Heading>
+      <Text>
+        Feel free to fill the form down below, or contact me directly by email
+      </Text>
+      <motion.div
+        initial={"hidden"}
+        whileInView={"visible"}
+        variants={{
+          visible: {
+            x: 0,
+            opacity: 1,
+            transition: {
+              type: "spring",
+            },
+          },
+          hidden: { opacity: 0, x: -300 },
+        }}
+      >
+        <Stack
+          spacing={{ base: 10, sm: 48 }}
+          mt={10}
+          direction={{ base: "column", sm: "row" }}
+          justifyContent={"space-between"}
         >
-          Send Message
-        </Button>
-      </Stack>
-    </form>
+          <Box flex={4}>
+            <ContactForm />
+          </Box>
+          <VStack
+            alignSelf={"center"}
+            alignItems={{ base: "self-start", sm: "self-end" }}
+            textAlign={{ base: "start", sm: "end" }}
+            flex={3}
+            width={"100%"}
+          >
+            <Box>
+              <Heading size={"md"}>Email</Heading>
+              <Link href="mailto:hello@hafid.me" color={"blue.500"}>
+                hello@hafid.me
+              </Link>
+            </Box>
+            <Box>
+              <Heading size={"md"} mt={6}>
+                Address
+              </Heading>
+              <Text>Somewhere in Grenoble, France</Text>
+            </Box>
+            <Box>
+              <Heading size={"md"} mt={6}>
+                Social
+              </Heading>
+              <HStack>
+                <Socials socials={props.socials} />
+              </HStack>
+            </Box>
+          </VStack>
+        </Stack>
+      </motion.div>
+    </>
   );
 };
