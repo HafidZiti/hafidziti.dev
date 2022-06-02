@@ -1,14 +1,15 @@
-export type Techno = {
+export type Technology = {
   name: string;
-  logo: string;
+  Icon: any; // It's a react component, comes from react-icons lib
 };
 
 export type Experience = {
   title: string;
+  customer: string;
   description: string;
   image: string;
   period: string;
-  color: string;
-  technos: Techno[];
+  colors: [string, string];
+  technologies: Technology[];
   link?: string;
 };
