@@ -1,4 +1,4 @@
-import { Text, VStack } from "@chakra-ui/react";
+import { Box, Heading, HStack, Link, Text, VStack } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { Quote as quoteType } from "../../types/quote";
 
@@ -22,15 +22,25 @@ export const Quote: React.ElementType = () => {
   }, []);
 
   return (
-    <VStack>
-      <Text fontSize="4xl">
-        <span>&#10077;</span>
-        {quote.q?.trim()}
-        <span>&#10078;</span>
-      </Text>
-      <Text fontSize="1xl" alignSelf={"end"}>
-        ― {quote.a}
-      </Text>
-    </VStack>
+    <Box>
+      <Heading size={"xl"} textAlign={"left"}>
+        Today&apos;s Quote
+      </Heading>
+      <VStack>
+        <Text fontSize="4xl">
+          <span>&#10077;</span>
+          {quote.q?.trim()}
+          <span>&#10078;</span>
+        </Text>
+        <HStack justifyContent={"space-between"} width="90%">
+          <Link href="https://zenquotes.io/" isExternal>
+            zenquotes.io
+          </Link>
+          <Text fontSize="1xl" alignSelf={"end"}>
+            ― {quote.a}
+          </Text>
+        </HStack>
+      </VStack>
+    </Box>
   );
 };
