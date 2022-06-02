@@ -6,13 +6,26 @@ import {
   Heading,
   HStack,
   Image,
-  Link,
   Text,
+  Link,
   useColorMode,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { Link as reactLink } from "react-scroll";
+import { Social } from "../../types/social";
+import { Socials } from "../Socials";
 
-export const LandingPage: React.FC = () => {
+type LandingPageProps = {
+  first_name: string;
+  last_name: string;
+  socials: Social[];
+  summary: string;
+  about: string;
+};
+
+export const LandingPage: React.FC<LandingPageProps> = (
+  props: LandingPageProps
+) => {
   const { colorMode } = useColorMode();
 
   return (
@@ -25,70 +38,36 @@ export const LandingPage: React.FC = () => {
       bgRepeat="no-repeat"
     >
       <Container pt={{ base: 20, sm: 36 }} pb={28} maxW="6xl" centerContent>
-        <Flex
-          flexDir={{ base: "column", sm: "row" }}
-          // border={"1px"}
-          alignItems={"center"}
-        >
-          <Box
-            flex={1}
-            // border={"1px"}
-            mr={{ base: 0, sm: 10 }}
-          >
+        <Flex flexDir={{ base: "column", sm: "row" }} alignItems={"center"}>
+          <Box flex={1} mr={{ base: 0, sm: 10 }} mt={{ base: 12, sm: 0 }}>
             <motion.div
               initial={{ x: -300 }}
               animate={{ x: 0, transition: { type: "spring" } }}
             >
-              <Heading size={"3xl"}>Hi, I&apos;m Hafid ZITI.</Heading>
-              <Text mt={1}>
-                Lorem Ipsum has been the industry&apos;s standard dummy text
-                ever since the 1500s, when an unknown printer took a galley of
-                type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, b
+              <Heading size={"2xl"}>
+                Hi👋, I&apos;m {props.first_name} {props.last_name}
+              </Heading>
+              <Text mt={2} fontSize="lg">
+                {props.summary}
               </Text>
               <HStack mt={2}>
-                <motion.div
-                  whileHover={{
-                    scale: 1.25,
-                  }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <Link href="https://chakra-ui.com" isExternal>
-                    <Image src="github.svg" alt="github logo"></Image>
-                  </Link>
-                </motion.div>
-                <motion.div
-                  whileHover={{
-                    scale: 1.25,
-                  }}
-                >
-                  <Link href="https://chakra-ui.com" isExternal>
-                    <Image src="linkedin.svg" alt="linkedin logo"></Image>
-                  </Link>
-                </motion.div>
-                <motion.div
-                  whileHover={{
-                    scale: 1.25,
-                  }}
-                >
-                  <Link href="https://chakra-ui.com" isExternal>
-                    <Image src="twitter.svg" alt="twitter logo"></Image>
-                  </Link>
-                </motion.div>
+                <Socials socials={props.socials} />
               </HStack>
               <Box mt={4}>
-                <Button
-                  colorScheme="blue"
-                  variant="solid"
-                  size="sm"
-                  mr={6}
-                  p={5}
+                <Link
+                  as={reactLink}
+                  to={"contact"}
+                  spy={true}
+                  smooth={true}
+                  py={1}
+                  borderRadius={"lg"}
+                  offset={-75}
                 >
                   Get in touch
-                </Button>
-                <Button colorScheme="blue" variant="solid" size="sm" p={5}>
+                </Link>
+                <Link ml={6} py={1} href="hafid_ziti_resume.pdf" isExternal>
                   Resume
-                </Button>
+                </Link>
               </Box>
             </motion.div>
           </Box>
@@ -97,18 +76,14 @@ export const LandingPage: React.FC = () => {
             flex={1}
             flexShrink={"unset"}
             flexGrow={1}
-            // border={"1px"}
             ml={{ base: 0, sm: 10 }}
+            mt={{ base: 10, sm: 0 }}
           >
             <motion.div
               initial={{ x: 300 }}
               animate={{ x: 0, transition: { type: "spring" } }}
             >
-              <Image
-                src="/landing-page-illustration.svg"
-                alt="illustration"
-                // border={"1px"}
-              />
+              <Image src="/landing-page-illustration.svg" alt="illustration" />
             </motion.div>
           </Box>
         </Flex>
