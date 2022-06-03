@@ -19,7 +19,7 @@
     "@emotion/react": "11.9.0",
     "@emotion/styled": "11.8.1",
     "chart.js": "^3.7.1",
-    "framer-motion": "^6.3.3",
+    "framer-motion": "^6.3.6",
     "hamburger-react": "^2.5.0",
     "next": "latest",
     "nodemailer": "^6.7.5",
