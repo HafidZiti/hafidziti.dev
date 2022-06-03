@@ -108,8 +108,7 @@ export const ContactForm: React.FC = () => {
           />
           {!errors.email ? (
             <FormHelperText>
-              Enter the email youd like to receive the response on.{" "}
-              {errors.email}
+              Enter the email youd like to receive the response on.
             </FormHelperText>
           ) : errors.email?.type === "required" ? (
             <FormErrorMessage>Email is required. </FormErrorMessage>

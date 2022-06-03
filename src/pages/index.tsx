@@ -12,7 +12,8 @@ import { experiences } from "../../data/experiences";
 import * as bio from "../../data/bio.json";
 import * as links from "../../data/links.json";
 import * as skills from "../../data/skills";
-const Index: React.ReactNode = () => (
+
+const Index: React.FC = () => (
   <>
     <NavBar {...links}></NavBar>
     <Container as="main" maxW="100%" p={0} centerContent>
