@@ -13,7 +13,7 @@
     "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
-    "@chakra-ui/icons": "^1.0.5",
+    "@chakra-ui/icons": "^2.0.1",
     "@chakra-ui/react": "^1.4.2",
     "@chakra-ui/theme-tools": "2.0.1",
     "@emotion/react": "11.9.0",
