@@ -15,7 +15,7 @@
   "dependencies": {
     "@chakra-ui/icons": "^1.0.5",
     "@chakra-ui/react": "^1.4.2",
-    "@chakra-ui/theme-tools": "1.1.2",
+    "@chakra-ui/theme-tools": "2.0.1",
     "@emotion/react": "11.9.0",
     "@emotion/styled": "11.8.1",
     "chart.js": "^3.7.1",
@@ -40,7 +40,7 @@
     "eslint": "^8.15.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react": "^7.30.0",
     "husky": "^8.0.1",
     "lint-staged": "^12.4.1",
     "prettier": "^2.6.2",
