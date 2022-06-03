@@ -13,27 +13,15 @@ import { AnimatePresence, motion } from "framer-motion";
 import Hamburger from "hamburger-react";
 import { DarkModeSwitch } from "../DarkModeSwitch";
 import styles from "./navbar.module.css";
+import { Link as LinkType } from "../../types/link";
 
-type LinkType = { route: string; name: string };
+type navBarProps = {
+  links: LinkType[];
+};
 
-export const NavBar: React.FC = () => {
+export const NavBar: React.FC<navBarProps> = (props: navBarProps) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const handleToggle = (): void => (isOpen ? onClose() : onOpen());
-  const links: LinkType[] = [
-    {
-      name: "Projects",
-      route: "projects",
-    },
-    {
-      name: "Skills",
-      route: "skills",
-    },
-    {
-      name: "About",
-      route: "about",
-    },
-  ];
-
   const _handleLinkOnClick = (): void => {
     if (isOpen) handleToggle();
   };
@@ -41,7 +29,7 @@ export const NavBar: React.FC = () => {
   const _renderNavBarLinks = (): React.ReactNode => {
     // Color Schemes for Link are not implemented in the default theme.
     // You can extend the theme to implement them.
-    return links.map((link: LinkType, index: number) => (
+    return props.links.map((link: LinkType, index: number) => (
       <Link
         key={index}
         as={reactLink}
