@@ -29,7 +29,7 @@ const Index: React.FC = () => {
       <NavBar {...links}></NavBar>
       <Container as="main" maxW="100%" p={0} centerContent>
         <LandingPage {...bio} />
-        <Container maxW="6xl" centerContent>
+        {/* <Container maxW="6xl" centerContent>
           <Box id="about" mt={12}>
             <About content={bio.about} />
           </Box>
@@ -42,13 +42,13 @@ const Index: React.FC = () => {
           <Box id="contact" width={"100%"} mt={12}>
             <Contact socials={bio.socials} />
           </Box>
-          <Box id="quote" width={"100%"} mt={12}>
+          <Box id="quote" wid th={"100%"} mt={12}>
             <Quote />
           </Box>
           <Footer>
             <Text fontSize={"sm"}>Made with ❤️+☕ by hafid</Text>
           </Footer>
-        </Container>
+        </Container>*/}
       </Container>
     </>
   );
