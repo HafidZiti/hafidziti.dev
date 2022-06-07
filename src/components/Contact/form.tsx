@@ -140,13 +140,13 @@ export const ContactForm: React.FC = () => {
         </FormControl>
         {/* Submit button */}
         <Button
+          width={"100%"}
           colorScheme="blue"
           bg="blue.400"
           color="white"
           _hover={{
             bg: "blue.500",
           }}
-          isFullWidth
           type="submit"
         >
           Send Message
