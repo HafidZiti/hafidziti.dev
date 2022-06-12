@@ -4,10 +4,10 @@ import {
   Flex,
   Heading,
   HStack,
-  Image,
   Text,
   Link,
   useColorMode,
+  Image,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Link as reactLink } from "react-scroll";
@@ -20,6 +20,7 @@ type LandingPageProps = {
   socials: Social[];
   summary: string;
   about: string;
+  isMobile?: boolean;
 };
 
 export const LandingPage: React.FC<LandingPageProps> = (
@@ -76,13 +77,18 @@ export const LandingPage: React.FC<LandingPageProps> = (
             flexShrink={"unset"}
             flexGrow={1}
             ml={{ base: 0, sm: 10 }}
-            mt={{ base: 10, sm: 0 }}
+            mt={{ base: 2, sm: 0 }}
           >
             <motion.div
-              initial={{ x: 300 }}
+              initial={{ x: props.isMobile ? -300 : 300 }}
               animate={{ x: 0, transition: { type: "spring" } }}
             >
-              <Image src="/landing-page-illustration.svg" alt="illustration" />
+              <Image
+                src="/landing-page-illustration.svg"
+                alt="illustration"
+                width={{ base: "344px", sm: "100%" }}
+                height={{ base: "259px", sm: "100%" }}
+              />
             </motion.div>
           </Box>
         </Flex>
