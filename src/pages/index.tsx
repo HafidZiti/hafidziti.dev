@@ -16,7 +16,7 @@ import { skills, mainSkills } from "../../data/skills";
 
 const Index: React.FC = () => {
   const [loading, setLoading] = useState(true); // this state is used to display/hide preloader
-  const [isMobile] = useMediaQuery("(display-mode: mobile)", { ssr: false });
+  const [isMobile] = useMediaQuery("(max-width: 480px)", { ssr: false });
 
   // // hide the preloader after 2s
   // useEffect(() => {
@@ -28,7 +28,7 @@ const Index: React.FC = () => {
       <NavBar {...links}></NavBar>
       <Container as="main" maxW="100%" p={0} centerContent>
         <LandingPage {...bio} isMobile={isMobile} />
-        {/* <Container maxW="6xl" centerContent>
+        <Container maxW="6xl" centerContent>
           <Box id="about" mt={12}>
             <About content={bio.about} />
           </Box>
@@ -41,13 +41,13 @@ const Index: React.FC = () => {
           <Box id="contact" width={"100%"} mt={12}>
             <Contact socials={bio.socials} />
           </Box>
-          <Box id="quote" wid th={"100%"} mt={12}>
+          <Box id="quote" width={"100%"} mt={12}>
             <Quote />
           </Box>
           <Footer>
             <Text fontSize={"sm"}>Made with ❤️+☕ by hafid</Text>
           </Footer>
-        </Container>*/}
+        </Container>
       </Container>
     </>
   );
