@@ -22,6 +22,8 @@ export const Socials: React.FC<socialProps> = (props: socialProps) => {
               <Image
                 src={`${social.name}.svg`}
                 alt={`${social.name}.logo`}
+                width={"45px"}
+                height={"45px"}
               ></Image>
             </Link>
           </motion.div>
