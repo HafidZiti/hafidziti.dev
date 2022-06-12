@@ -88,7 +88,7 @@ export const ContactForm: React.FC = () => {
         {/* Name */}
         <FormControl isInvalid={!!errors.name} isRequired>
           <FormLabel htmlFor="name">Name</FormLabel>
-          <Input {...register("name", { required: true })} />
+          <Input id="name" {...register("name", { required: true })} />
           {!errors.name && (
             <FormErrorMessage>Name is required.</FormErrorMessage>
           )}
@@ -97,6 +97,7 @@ export const ContactForm: React.FC = () => {
         <FormControl isInvalid={!!errors.email} isRequired>
           <FormLabel htmlFor="email">Email</FormLabel>
           <Input
+            id="email"
             type={"email"}
             {...register("email", {
               required: true,
@@ -119,7 +120,11 @@ export const ContactForm: React.FC = () => {
         {/* Message */}
         <FormControl isInvalid={!!errors.message} isRequired>
           <FormLabel htmlFor="message">Message</FormLabel>
-          <Textarea size="sm" {...register("message", { required: true })} />
+          <Textarea
+            id="message"
+            size="sm"
+            {...register("message", { required: true })}
+          />
           {!errors.message && (
             <FormErrorMessage>Message is required.</FormErrorMessage>
           )}

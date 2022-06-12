@@ -90,6 +90,7 @@ export const NavBar: React.FC<navBarProps> = (props: navBarProps) => {
             distance={"sm"}
             toggle={handleToggle}
             color={useColorModeValue("#1A202C", "#fff")}
+            label="menu items"
           />
         </Box>
 
