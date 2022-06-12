@@ -28,6 +28,17 @@ export const LandingPage: React.FC<LandingPageProps> = (
 ) => {
   const { colorMode } = useColorMode();
 
+  const _renderIllustration = () => {
+    return (
+      <Image
+        src="/landing-page-illustration.svg"
+        alt="illustration"
+        width={{ base: "344px", sm: "100%" }}
+        height={{ base: "259px", sm: "100%" }}
+      />
+    );
+  };
+
   return (
     <Box
       w={"100%"}
@@ -79,17 +90,16 @@ export const LandingPage: React.FC<LandingPageProps> = (
             ml={{ base: 0, sm: 10 }}
             mt={{ base: 2, sm: 0 }}
           >
-            <motion.div
-              initial={{ x: props.isMobile ? -300 : 300 }}
-              animate={{ x: 0, transition: { type: "spring" } }}
-            >
-              <Image
-                src="/landing-page-illustration.svg"
-                alt="illustration"
-                width={{ base: "344px", sm: "100%" }}
-                height={{ base: "259px", sm: "100%" }}
-              />
-            </motion.div>
+            {!props.isMobile ? (
+              <motion.div
+                initial={{ x: 300 }}
+                animate={{ x: 0, transition: { type: "spring" } }}
+              >
+                {_renderIllustration()}
+              </motion.div>
+            ) : (
+              _renderIllustration()
+            )}
           </Box>
         </Flex>
       </Container>
