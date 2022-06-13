@@ -1,5 +1,5 @@
-import { Text, Box, Container } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
+import { Text, Box, Container, useMediaQuery } from "@chakra-ui/react";
+import React from "react";
 import { Footer } from "../components/Footer";
 import { NavBar } from "../components/NavBar";
 import { LandingPage } from "../components/LandingPage";
@@ -8,27 +8,19 @@ import { Quote } from "../components/Quote";
 import { Contact } from "../components/Contact";
 import { About } from "../components/about";
 import { Projects } from "../components/Projects";
-import { SplashScreen } from "../components/SplashScreen";
 import { experiences } from "../../data/experiences";
 import bio from "../../data/bio.json";
 import links from "../../data/links.json";
 import { skills, mainSkills } from "../../data/skills";
 
 const Index: React.FC = () => {
-  const [loading, setLoading] = useState(true); // this state is used to display/hide preloader
+  const [isMobile] = useMediaQuery("(max-width: 480px)", { ssr: false });
 
-  // hide the preloader after 2s
-  useEffect(() => {
-    setTimeout(() => setLoading(false), 2000);
-  }, []);
-
-  return loading ? (
-    <SplashScreen />
-  ) : (
+  return (
     <>
       <NavBar {...links}></NavBar>
       <Container as="main" maxW="100%" p={0} centerContent>
-        <LandingPage {...bio} />
+        <LandingPage {...bio} isMobile={isMobile} />
         <Container maxW="6xl" centerContent>
           <Box id="about" mt={12}>
             <About content={bio.about} />
