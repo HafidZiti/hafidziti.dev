@@ -8,6 +8,8 @@ import {
   Link,
   useColorMode,
   Image,
+  ButtonGroup,
+  Button,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Link as reactLink } from "react-scroll";
@@ -54,20 +56,41 @@ export const LandingPage: React.FC<LandingPageProps> = (
                 <Socials socials={props.socials} />
               </HStack>
               <Box mt={4}>
-                <Link
-                  as={reactLink}
-                  to={"contact"}
-                  spy={true}
-                  smooth={true}
-                  py={1}
-                  borderRadius={"lg"}
-                  offset={-75}
-                >
-                  Get in touch
-                </Link>
-                <Link ml={6} py={1} href="hafid_ziti_resume.pdf" isExternal>
-                  Resume
-                </Link>
+                <ButtonGroup gap="3">
+                  <Button
+                    colorScheme="cyan"
+                    variant="solid"
+                    width={{ base: "120px", sm: "200px" }}
+                    p={0}
+                  >
+                    <Link
+                      as={reactLink}
+                      to={"contact"}
+                      spy={true}
+                      smooth={true}
+                      py={1}
+                      borderRadius={"lg"}
+                      offset={-75}
+                      width={"100%"}
+                    >
+                      Get in touch
+                    </Link>
+                  </Button>
+                  <Button
+                    colorScheme="cyan"
+                    variant="outline"
+                    width={{ base: "120px", sm: "200px" }}
+                    p={0}
+                  >
+                    <Link
+                      href="hafid_ziti_resume.pdf"
+                      width={"100%"}
+                      isExternal
+                    >
+                      Resume
+                    </Link>
+                  </Button>
+                </ButtonGroup>
               </Box>
             </motion.div>
           </Box>
