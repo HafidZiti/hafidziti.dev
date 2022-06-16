@@ -9,4 +9,4 @@ updates:
     schedule:
       interval: "weekly"
     commit-message:
-      prefix: "bot"
+      prefix: ":arrow_up:"
