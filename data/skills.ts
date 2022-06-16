@@ -57,6 +57,10 @@ export const mainSkills = [
     level: 90,
   },
   {
+    name: "Code Review",
+    level: 100,
+  },
+  {
     name: "Typescript",
     level: 80,
   },
