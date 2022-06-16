@@ -14,6 +14,7 @@ import Hamburger from "hamburger-react";
 import { DarkModeSwitch } from "../DarkModeSwitch";
 import styles from "./navbar.module.css";
 import { Link as LinkType } from "../../types/link";
+import { Logo } from "../Logo";
 
 type navBarProps = {
   links: LinkType[];
@@ -54,7 +55,7 @@ export const NavBar: React.FC<navBarProps> = (props: navBarProps) => {
     <Flex
       as="nav"
       w={"100%"}
-      h={"60px"}
+      h={"65px"}
       align={"center"}
       justify={"space-between"}
       wrap="wrap"
@@ -66,16 +67,23 @@ export const NavBar: React.FC<navBarProps> = (props: navBarProps) => {
       boxShadow="2xl"
       zIndex={"sticky"}
     >
-      <Box mr={5}>
+      <Flex
+        as={Link}
+        mr={5}
+        alignItems={"center"}
+        href={"/"}
+        _hover={{ "text-decoration": "none" }}
+      >
+        <Logo color={useColorModeValue("black", "white")} />
         <Heading
           as="h1"
           size="lg"
           letterSpacing={"tighter"}
           color={useColorModeValue("gray.800", "white")}
         >
-          Next.
+          Hafid Ziti
         </Heading>
-      </Box>
+      </Flex>
 
       <Flex align={"center"}>
         <Box mr={2} display={{ base: "block", sm: "none" }}>
