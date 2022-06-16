@@ -8,7 +8,7 @@ export const Footer: React.FC<FlexProps> = (props: FlexProps) => (
     borderTopWidth={1}
     borderStyle={"solid"}
     borderColor={useColorModeValue("gray.200", "gray.700")}
-    mt={10}
+    mt={6}
     px={"auto"}
     justifyContent={"center"}
     alignItems={"center"}
