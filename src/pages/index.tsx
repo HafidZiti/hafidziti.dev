@@ -8,8 +8,10 @@ import { Quote } from "../components/Quote";
 import { Contact } from "../components/Contact";
 import { About } from "../components/about";
 import { Projects } from "../components/Projects";
+import { HowIsBuilt } from "../components/HowIsBuilt";
 import { experiences } from "../../data/experiences";
 import bio from "../../data/bio.json";
+import howIsBuilt from "../../data/howIsBuilt.json";
 import links from "../../data/links.json";
 import { skills, mainSkills } from "../../data/skills";
 
@@ -36,6 +38,9 @@ const Index: React.FC = () => {
           </Box>
           <Box id="quote" width={"100%"} mt={12}>
             <Quote />
+          </Box>
+          <Box id="how_is_built" width={"100%"} mt={12}>
+            <HowIsBuilt {...howIsBuilt} />
           </Box>
           <Footer>
             <Text fontSize={"sm"}>Made with ❤️+☕ by hafid</Text>
