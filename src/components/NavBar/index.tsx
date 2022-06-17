@@ -72,7 +72,7 @@ export const NavBar: React.FC<navBarProps> = (props: navBarProps) => {
         mr={5}
         alignItems={"center"}
         href={"/"}
-        _hover={{ "text-decoration": "none" }}
+        _hover={{ textDecoration: "none" }}
       >
         <Logo color={useColorModeValue("black", "white")} />
         <Heading
