@@ -22,7 +22,7 @@ export const Contact: React.FC<contactProps> = (props: contactProps) => {
       <Heading size={"xl"} textAlign={"left"}>
         Contact me!
       </Heading>
-      <Text>
+      <Text mt={5}>
         Feel free to fill the form down below, or contact me directly by email
       </Text>
       <motion.div
@@ -41,7 +41,7 @@ export const Contact: React.FC<contactProps> = (props: contactProps) => {
       >
         <Stack
           spacing={{ base: 10, sm: 48 }}
-          mt={10}
+          mt={8}
           direction={{ base: "column", sm: "row" }}
           justifyContent={"space-between"}
         >

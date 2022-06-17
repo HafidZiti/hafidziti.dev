@@ -26,7 +26,7 @@ export const Quote: React.ElementType = () => {
       <Heading size={"xl"} textAlign={"left"}>
         Today&apos;s Quote
       </Heading>
-      <VStack>
+      <VStack mt={5}>
         <Text fontSize="4xl">
           <span>&#10077;</span>
           {quote.q?.trim()}

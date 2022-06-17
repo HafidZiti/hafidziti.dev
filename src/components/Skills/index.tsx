@@ -112,7 +112,7 @@ export const Skills: React.FC<skillsProps> = (props: skillsProps) => {
         Skills
       </Heading>
       <Stack
-        mt={10}
+        mt={5}
         spacing={10}
         direction={{ base: "column", sm: "row" }}
         justifyContent={"space-between"}

@@ -10,7 +10,7 @@ export const About: React.FC<aboutProps> = (props: aboutProps) => {
       <Heading size={"xl"} textAlign={"left"}>
         {"About me"}
       </Heading>
-      <Text fontSize={"xl"}>{props.content}</Text>
+      <Text mt={5}>{props.content}</Text>
     </>
   );
 };
