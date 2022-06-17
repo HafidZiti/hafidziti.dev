@@ -33,11 +33,11 @@ export const HowIsBuilt: React.FC<howIsBuiltProps> = (
       <Text mt={5}>{intro}</Text>
       <UnorderedList mt={3} ml={10}>
         {technologies.map((techno: Technology, index: number) => (
-          <ListItem key={index}>
+          <ListItem key={index} my={2}>
             <Text as={"span"} fontSize="md" fontWeight={"bold"}>
               {techno.type}:&nbsp;
             </Text>
-            <Link color={"blue.600"} href={techno.link} isExternal>
+            <Link color={"blue.600"} href={techno.link} isExternal py={2}>
               {techno.name} <ExternalLinkIcon mx="1px" />
             </Link>
           </ListItem>
