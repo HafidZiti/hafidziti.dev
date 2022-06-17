@@ -138,6 +138,7 @@ export const ContactForm: React.FC = () => {
               setCaptchaError(value ? "" : "Robots are not welcome yet!")
             }
             theme={colorMode === "dark" ? "dark" : "light"}
+            style={{ margin: "0 auto", display: "table" }}
           />
           {!!captchaError && (
             <FormErrorMessage>{captchaError}</FormErrorMessage>
