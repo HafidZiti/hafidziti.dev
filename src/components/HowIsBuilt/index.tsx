@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import {
   Box,
@@ -18,12 +19,19 @@ interface Technology {
 type howIsBuiltProps = {
   intro: string;
   technologies: Technology[];
+  isMobile: boolean;
 };
 
 export const HowIsBuilt: React.FC<howIsBuiltProps> = (
   props: howIsBuiltProps
 ) => {
-  const { intro, technologies } = props;
+  const { intro, technologies, isMobile } = props;
+  const [linkMargin, setLinkMargin] = useState(1);
+  // bcs in the mobile view, we need more space around the link to avoid SEO issues.
+  useEffect(() => {
+    if (isMobile) setLinkMargin(4);
+    else setLinkMargin(1);
+  }, [isMobile]);
 
   return (
     <Box>
@@ -33,11 +41,16 @@ export const HowIsBuilt: React.FC<howIsBuiltProps> = (
       <Text mt={5}>{intro}</Text>
       <UnorderedList mt={3} ml={10}>
         {technologies.map((techno: Technology, index: number) => (
-          <ListItem key={index} my={2}>
+          <ListItem key={index} my={linkMargin}>
             <Text as={"span"} fontSize="md" fontWeight={"bold"}>
               {techno.type}:&nbsp;
             </Text>
-            <Link color={"blue.600"} href={techno.link} isExternal py={2}>
+            <Link
+              color={"blue.600"}
+              href={techno.link}
+              isExternal
+              py={linkMargin}
+            >
               {techno.name} <ExternalLinkIcon mx="1px" />
             </Link>
           </ListItem>

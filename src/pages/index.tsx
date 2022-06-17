@@ -40,7 +40,7 @@ const Index: React.FC = () => {
             <Quote />
           </Box>
           <Box id="how_is_built" width={"100%"} mt={12}>
-            <HowIsBuilt {...howIsBuilt} />
+            <HowIsBuilt {...howIsBuilt} isMobile={isMobile} />
           </Box>
           <Footer>
             <Text fontSize={"sm"}>Made with ❤️+☕ by hafid</Text>

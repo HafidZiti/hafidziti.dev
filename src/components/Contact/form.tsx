@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import ReCAPTCHA from "react-google-recaptcha";
 import {
@@ -23,6 +23,14 @@ type FormData = {
 
 export const ContactForm: React.FC = () => {
   const { colorMode } = useColorMode();
+  const [renderCaptcha, setRenderCaptcha] = useState(false);
+
+  // For performance reasons, we will wait 10s before rendering the reCaptcha.
+  useEffect(() => {
+    setTimeout(() => {
+      setRenderCaptcha(true);
+    }, 10000);
+  }, []);
 
   const {
     register,
@@ -130,20 +138,22 @@ export const ContactForm: React.FC = () => {
           )}
         </FormControl>
         {/* ReCAPTCHA */}
-        <FormControl isInvalid={!!captchaError} isRequired>
-          <ReCAPTCHA
-            ref={recaptchaRef}
-            sitekey="6LepTy0gAAAAAFMMZUoC9JWpiw71qZw3AzcyhFdF"
-            onChange={(value: string) =>
-              setCaptchaError(value ? "" : "Robots are not welcome yet!")
-            }
-            theme={colorMode === "dark" ? "dark" : "light"}
-            style={{ margin: "0 auto", display: "table" }}
-          />
-          {!!captchaError && (
-            <FormErrorMessage>{captchaError}</FormErrorMessage>
-          )}
-        </FormControl>
+        {renderCaptcha && (
+          <FormControl isInvalid={!!captchaError} isRequired>
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              sitekey="6LepTy0gAAAAAFMMZUoC9JWpiw71qZw3AzcyhFdF"
+              onChange={(value: string) =>
+                setCaptchaError(value ? "" : "Robots are not welcome yet!")
+              }
+              theme={colorMode === "dark" ? "dark" : "light"}
+              style={{ margin: "0 auto", display: "table" }}
+            />
+            {!!captchaError && (
+              <FormErrorMessage>{captchaError}</FormErrorMessage>
+            )}
+          </FormControl>
+        )}
         {/* Submit button */}
         <Button
           width={"100%"}
