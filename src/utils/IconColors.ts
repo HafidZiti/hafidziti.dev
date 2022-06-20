@@ -43,4 +43,8 @@ export const iconColors = {
   vscode: "#007acc",
   kibana: "#005571",
   nodered: "#8f0000",
+  shopify: "#7ab55c",
+  framer: "#0055ff",
+  npm: "#cb3837",
+  yarn: "#2c8ebb",
 };

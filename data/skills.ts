@@ -23,12 +23,13 @@ import {
   SiGithub,
   SiGitlab,
   SiNestjs,
-  // SiPrettier,
-  // SiEslint,
-  //Shopify
-  //Webpack
-  // framer
-  //Yarn, NPM,
+  SiPrettier,
+  SiEslint,
+  SiShopify,
+  SiWebpack,
+  SiFramer,
+  SiNpm,
+  SiYarn,
 } from "react-icons/si";
 
 export const mainSkills = [
@@ -77,6 +78,9 @@ export const skills = [
   { name: "HTML5", Icon: SiHtml5 },
   { name: "CSS3", Icon: SiCss3 },
   { name: "Sass", Icon: SiSass },
+  { name: "Framer", Icon: SiFramer },
+  { name: "EsLint", Icon: SiEslint },
+  { name: "Prettier", Icon: SiPrettier },
   { name: "Styled-components", Icon: SiStyledcomponents },
   { name: "Chakra UI", Icon: SiChakraui },
   { name: "Jest", Icon: SiJest },
@@ -85,10 +89,14 @@ export const skills = [
   { name: "Git", Icon: SiGit },
   { name: "GitHub", Icon: SiGithub },
   { name: "GitLab", Icon: SiGitlab },
+  { name: "Npm", Icon: SiNpm },
+  { name: "Yarn", Icon: SiYarn },
   { name: "Vercel", Icon: SiVercel },
   { name: "Firebase", Icon: SiFirebase },
+  { name: "Webpack", Icon: SiWebpack, dabbled: true },
   { name: "Java", Icon: SiJava, dabbled: true },
   { name: "Express.js", Icon: SiExpress, dabbled: true },
   { name: "Spring Boot", Icon: SiSpringboot, dabbled: true },
   { name: "NestJS", Icon: SiNestjs, dabbled: true },
+  { name: "Shopify", Icon: SiShopify, dabbled: true },
 ];
