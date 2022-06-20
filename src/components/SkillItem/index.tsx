@@ -20,7 +20,7 @@ export const SkillItem: React.FC<skillItemProps> = (props: skillItemProps) => {
         hidden: { opacity: 1, y: 80 },
       }}
     >
-      <HStack width={"150px"} boxShadow="md" p="1.5" rounded="md">
+      <HStack width={"138px"} boxShadow="md" p="1.5" rounded="md">
         <Icon
           color={iconColors[name.replace(" ", "").toLowerCase()]}
           size={45}

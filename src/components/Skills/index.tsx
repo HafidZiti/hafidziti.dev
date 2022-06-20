@@ -126,7 +126,7 @@ export const Skills: React.FC<skillsProps> = (props: skillsProps) => {
             with:
           </Text>
           <SimpleGrid
-            columns={{ base: 2, sm: 3 }}
+            columns={{ base: 2, sm: 4 }}
             spacing="6"
             p="5"
             pl="0"
@@ -152,6 +152,7 @@ export const Skills: React.FC<skillsProps> = (props: skillsProps) => {
         >
           <Text>Main skill set 🚀</Text>
           <Box
+            mt={{ base: 0, sm: 16 }}
             pt={0}
             width={{ base: "350px", sm: "300px", md: "400px", lg: "500px" }}
           >

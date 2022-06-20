@@ -12,9 +12,9 @@ import { Link as reactLink } from "react-scroll";
 import { AnimatePresence, motion } from "framer-motion";
 import Hamburger from "hamburger-react";
 import { DarkModeSwitch } from "../DarkModeSwitch";
-import styles from "./navbar.module.css";
 import { Link as LinkType } from "../../types/link";
 import { Logo } from "../Logo";
+import styles from "./navbar.module.css";
 
 type navBarProps = {
   links: LinkType[];
