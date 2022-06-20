@@ -6,11 +6,6 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
-          <title>Hafid Ziti - Front-end Developer</title>
-          <meta
-            name="description"
-            content="I'm Hafid Ziti, a self-taught front-end develop, interested in the web, JS lover"
-          />
           <link
             rel="icon"
             sizes="any"
