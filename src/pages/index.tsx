@@ -9,7 +9,7 @@ import { Contact } from "../components/Contact";
 import { About } from "../components/about";
 import { Projects } from "../components/Projects";
 import { HowIsBuilt } from "../components/HowIsBuilt";
-import { experiences } from "../../data/experiences";
+import { dailyTasks, experiences } from "../../data/experiences";
 import bio from "../../data/bio.json";
 import howIsBuilt from "../../data/howIsBuilt.json";
 import links from "../../data/links.json";
@@ -28,7 +28,10 @@ const Index: React.FC = () => {
             <About content={bio.about} />
           </Box>
           <Box id="projects" mt={12}>
-            <Projects experiences={experiences}></Projects>
+            <Projects
+              experiences={experiences}
+              dailyTasks={dailyTasks}
+            ></Projects>
           </Box>
           <Box id="skills" width={"100%"} mt={12}>
             <Skills skills={skills} mainSkills={mainSkills} />

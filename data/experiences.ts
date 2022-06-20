@@ -32,6 +32,17 @@ import {
 } from "react-icons/si";
 import { Experience } from "../src/types/experience";
 
+export const dailyTasks = [
+  "Setting up codebases",
+  "Code refacto",
+  "Code review",
+  "Setting up front-end architecture",
+  "Coming up with seggetions",
+  "Write e2e & unit tests",
+  "Write documentation",
+  "Self-Taught",
+];
+
 export const experiences: Experience[] = [
   {
     title: "React.js developer",
