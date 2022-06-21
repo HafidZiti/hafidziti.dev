@@ -11,7 +11,7 @@
 <br>
   
 <p align="center">
-Designed and created with <span style="color: #8b0000;">&hearts;</span> by <a href="https://hafidziti.me">Hafid ZITI</a>.
+Designed and created with <span style="color: #8b0000;">&hearts;</span> by <a href="https://hafidziti.dev">Hafid ZITI</a>.
 </p>
 
 <p align="center">
