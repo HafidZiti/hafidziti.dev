@@ -1,35 +1,68 @@
-# Example app with [chakra-ui](https://github.com/chakra-ui/chakra-ui) and TypeScript
+<div align="center">
+  <img alt="HZ logo" src="docs/hz-logo.svg" height="64" />
+</div>
 
-This example features how to use [chakra-ui](https://github.com/chakra-ui/chakra-ui) as the component library within a Next.js app with TypeScript.
+<div align="center">
+  <strong>
+    Hafid ZITI
+  </strong>
+</div>
+  
+<br>
+  
+<p align="center">
+Designed and created with <span style="color: #8b0000;">&hearts;</span> by <a href="https://hafidziti.dev">Hafid ZITI</a>.
+</p>
 
-Next.js and chakra-ui have built-in TypeScript declarations, so we'll get autocompletion for their modules straight away.
+<p align="center">
+Fixme: Add state
+</p>
 
-We are connecting the Next.js `_app.js` with `chakra-ui`'s Provider and theme so the pages can have app-wide dark/light mode. We are also creating some components which shows the usage of `chakra-ui`'s style props.
+## Hafid's portfolio built with
+
+- **Framework**: [Next.js](https://nextjs.org/)
+- **Deployment**: [Vercel](https://vercel.com)
+- **Styling**: [Chakra UI](https://chakra-ui.com/)
+- **Designing**: [Figma](https://figma.com/)
+- **Language**: [Chakra UI](https://typescriptlang.org/)
+- **Animations**: [Framer Motion](https://framer.com/motion)
+
+## Installation 🔧
+
+Install dependencies
+
+```
+$ yarn
+```
+
+Create a `.env` file similar to [`.env.example`](https://github.com/hafid//blob/main/.env.example).
+
+## Running Server 🚀
+
+Start the development server
+
+```
+$ yarn dev
+```
+
+## Building 🏗️
+
+```
+$ yarn dev
+```
+
+Then
+
+```
+$ yarn start
+```
+
+## License 📜
+
+`Hafid's portfolio` is available under the MIT license.
 
 ## Deploy your own
 
 Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-chakra-ui-typescript)
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-chakra-ui-typescript&project-name=with-chakra-ui-typescript&repository-name=with-chakra-ui-typescript)
-
-## How to use
-
-### Using `create-next-app`
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-chakra-ui-typescript potfolio
-# or
-yarn create next-app --example with-chakra-ui-typescript potfolio
-# or
-pnpm create next-app -- --example with-chakra-ui-typescript potfolio
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-
-## Notes
-
-Chakra has supported Gradients and RTL in `v1.1`. To utilize RTL, [add RTL direction and swap](https://chakra-ui.com/docs/features/rtl-support).
-
-If you don't have multi-direction app, you should make `<Html lang="ar" dir="rtl">` inside `_document.ts`.
