@@ -2,16 +2,20 @@
   <img alt="HZ logo" src="docs/hz-logo.svg" height="64" />
 </div>
 
+<div align="center">
+  <strong>
+    Hafid ZITI
+  </strong>
+</div>
+  
 <br>
-<p align="center">
-Hafid ZITI
-</p>
+  
 <p align="center">
 Designed and created with <span style="color: #8b0000;">&hearts;</span> by <a href="https://hafidziti.me">Hafid ZITI</a>.
 </p>
 
 <p align="center">
-FIX ME§§§§§§§§
+Fixme: Add state
 </p>
 
 ## Hafid's portfolio built with
