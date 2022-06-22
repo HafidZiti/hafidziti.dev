@@ -14,6 +14,7 @@ import {
   useColorMode,
   useToast,
 } from "@chakra-ui/react";
+import useOnScreen from "../../hooks/use-on-screen";
 
 type FormData = {
   name: string;
@@ -23,14 +24,14 @@ type FormData = {
 
 export const ContactForm: React.FC = () => {
   const { colorMode } = useColorMode();
-  const [renderCaptcha, setRenderCaptcha] = useState(false);
+  const [isAlreadyRendred, setIsAlreadyRendred] = useState(false);
+  // For performance reasons, we display the reCaptcha only when the form is visible on the view
+  const formRef = useRef();
+  const isOnScreen = useOnScreen(formRef);
 
-  // For performance reasons, we will wait 10s before rendering the reCaptcha.
   useEffect(() => {
-    setTimeout(() => {
-      setRenderCaptcha(true);
-    }, 10000);
-  }, []);
+    if (isOnScreen) setIsAlreadyRendred(true);
+  }, [isOnScreen]);
 
   const {
     register,
@@ -91,7 +92,10 @@ export const ContactForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit((data: FormData) => submitForm(data))}>
+    <form
+      onSubmit={handleSubmit((data: FormData) => submitForm(data))}
+      ref={formRef}
+    >
       <Stack spacing={4}>
         {/* Name */}
         <FormControl isInvalid={!!errors.name} isRequired>
@@ -138,7 +142,7 @@ export const ContactForm: React.FC = () => {
           )}
         </FormControl>
         {/* ReCAPTCHA */}
-        {renderCaptcha && (
+        {(isOnScreen || isAlreadyRendred) && (
           <FormControl isInvalid={!!captchaError} isRequired>
             <ReCAPTCHA
               ref={recaptchaRef}
