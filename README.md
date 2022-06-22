@@ -31,7 +31,7 @@ Designed and created with ❤️+☕ by <a href="https://hafidziti.dev">Hafid ZI
 - **Deployment**: [Vercel](https://vercel.com)
 - **Styling**: [Chakra UI](https://chakra-ui.com/)
 - **Designing**: [Figma](https://figma.com/)
-- **Language**: [Chakra UI](https://typescriptlang.org/)
+- **Language**: [TypeScript](https://typescriptlang.org/)
 - **Animations**: [Framer Motion](https://framer.com/motion)
 
 ## Installation 🔧
