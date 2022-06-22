@@ -11,11 +11,18 @@
 <br>
   
 <p align="center">
-Designed and created with <span style="color: #8b0000;">&hearts;</span> by <a href="https://hafidziti.dev">Hafid ZITI</a>.
+Designed and created with ❤️+☕ by <a href="https://hafidziti.dev">Hafid ZITI</a>.
 </p>
 
 <p align="center">
-Fixme: Add state
+    <img src="https://img.shields.io/github/workflow/status/HafidZiti/hafidziti.dev/ci" alt="Build status"/>
+    <img src="https://img.shields.io/github/issues-pr/HafidZiti/hafidziti.dev" alt="Opened PR"/>
+    <img src="https://img.shields.io/github/issues/HafidZiti/hafidziti.dev" alt="Opened issues"/>
+    <img src="https://img.shields.io/github/package-json/v/HafidZiti/hafidziti.dev" alt="Version"/>
+    <img src="https://img.shields.io/github/languages/code-size/HafidZiti/hafidziti.dev" alt="Repo code size"/>
+    <img src="https://img.shields.io/github/license/HafidZiti/hafidziti.dev" alt="License MIT"/>
+    <img src="https://img.shields.io/badge/author-Hafid%20Ziti-blue" alt="author Harsh Goel"/>
+    
 </p>
 
 ## Hafid's portfolio built with
