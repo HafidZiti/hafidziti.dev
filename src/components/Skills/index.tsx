@@ -129,7 +129,7 @@ export const Skills: React.FC<skillsProps> = (props: skillsProps) => {
             columns={{ base: 2, sm: 4 }}
             spacing="6"
             p="5"
-            pl="0"
+            pl={{ base: 5, sm: 0 }}
             textAlign="center"
             alignSelf={"start"}
           >
