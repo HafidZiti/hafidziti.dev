@@ -1,6 +1,8 @@
+import { FC } from "react";
+
 export interface Technology {
   name: string;
-  Icon: any; // It's a react component, comes from react-icons lib
+  Icon: FC;
 }
 
 export interface Experience {
