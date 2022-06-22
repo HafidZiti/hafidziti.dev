@@ -2,7 +2,7 @@ import { FC } from "react";
 
 export interface Technology {
   name: string;
-  Icon: FC;
+  Icon: FC<{ color: string; size: number }>;
 }
 
 export interface Experience {
