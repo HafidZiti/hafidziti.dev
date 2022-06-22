@@ -4,7 +4,7 @@
 
 <div align="center">
   <strong>
-    Hafid ZITI
+    hafidziti.dev
   </strong>
 </div>
   
