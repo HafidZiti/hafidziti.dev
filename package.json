@@ -1,4 +1,19 @@
 {
+  "name": "hafidziti.dev",
+  "description": "My personal website",
+  "version": "1.0.0",
+  "author": {
+    "name": "Hafid Ziti",
+    "email": "hello@hafidziti.dev",
+    "url": "https://hafidziti.dev"
+  },
+  "keywords": [
+    "portfolio",
+    "personal",
+    "website",
+    "nextjs",
+    "chakra-ui"
+  ],
   "private": true,
   "scripts": {
     "dev": "next",
