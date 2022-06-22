@@ -1,4 +1,4 @@
-import { Text, Box, Container, useMediaQuery } from "@chakra-ui/react";
+import { Text, Box, Container, useMediaQuery, Link } from "@chakra-ui/react";
 import React from "react";
 import { Footer } from "../components/Footer";
 import { NavBar } from "../components/NavBar";
@@ -46,7 +46,12 @@ const Index: React.FC = () => {
             <HowIsBuilt {...howIsBuilt} isMobile={isMobile} />
           </Box>
           <Footer>
-            <Text fontSize={"sm"}>Made with ❤️+☕ by hafid</Text>
+            <Text fontSize={"sm"}>
+              Made with ❤️+☕ by{" "}
+              <Link href={"https://github.com/HafidZiti"} isExternal>
+                Hafid
+              </Link>
+            </Text>
           </Footer>
         </Container>
       </Container>

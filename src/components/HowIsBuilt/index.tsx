@@ -75,7 +75,7 @@ export const HowIsBuilt: React.FC<howIsBuiltProps> = (
         more, feel free to take a look on the source code on&nbsp;
         <Link
           color={"blue.600"}
-          href="https://github.com/HafidZiti/portfolio"
+          href="https://github.com/HafidZiti/hafidziti.dev"
           isExternal
         >
           Github
