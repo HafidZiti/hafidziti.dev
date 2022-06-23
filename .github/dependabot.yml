@@ -10,3 +10,5 @@ updates:
       interval: "weekly"
     commit-message:
       prefix: ":arrow_up:"
+    reviewers:
+      - "HafidZiti"
