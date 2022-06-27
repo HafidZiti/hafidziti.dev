@@ -34,7 +34,7 @@
     "@emotion/react": "11.9.3",
     "@emotion/styled": "11.9.3",
     "chart.js": "^3.8.0",
-    "framer-motion": "^6.3.13",
+    "framer-motion": "^6.3.16",
     "hamburger-react": "^2.5.0",
     "next": "latest",
     "nodemailer": "^6.7.5",
