@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>Hafid Ziti - Front-end Developer</title>
         <meta
           name="description"
-          content="I'm Hafid Ziti, a self-taught front-end develop, interested in the web, JS lover"
+          content="I'm Hafid Ziti, a self-taught front-end developer, interested in the web, JS lover"
         />
         <meta name="language" content="English" />
         <meta name="author" content="Hafid Ziti" />
@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:title" content="Hafid Ziti | Front-end developer" />
         <meta
           property="og:description"
-          content="Hello world! I'm Hafid Ziti, a self-taught front-end develop, JS lover."
+          content="Hello world! I'm Hafid Ziti, a self-taught front-end developer, JS lover."
         />
         <meta property="og:image" content="https://hafidziti.dev/banner.svg" />
         <meta property="og:image:alt" content="Hafid Ziti" />
