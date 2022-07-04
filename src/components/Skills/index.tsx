@@ -53,7 +53,7 @@ export const Skills: React.FC<skillsProps> = (props: skillsProps) => {
 
   const [data] = useState({
     ...dataTemplate,
-    lables: (dataTemplate.labels = mainSkills.map(
+    labels: (dataTemplate.labels = mainSkills.map(
       (mSkill: MainSkill) => mSkill.name
     )),
     datasets: [
