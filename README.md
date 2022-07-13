@@ -55,7 +55,7 @@ $ yarn dev
 ## Building 🏗️
 
 ```
-$ yarn dev
+$ yarn build
 ```
 
 Then
