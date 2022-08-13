@@ -28,13 +28,13 @@
     "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
-    "@chakra-ui/icons": "^2.0.4",
+    "@chakra-ui/icons": "^2.0.6",
     "@chakra-ui/react": "^2.2.4",
     "@chakra-ui/theme-tools": "2.0.5",
     "@emotion/react": "11.10.0",
     "@emotion/styled": "11.10.0",
-    "chart.js": "^3.8.2",
-    "framer-motion": "^6.5.1",
+    "chart.js": "^3.9.1",
+    "framer-motion": "^7.1.0",
     "hamburger-react": "^2.5.0",
     "next": "latest",
     "nodemailer": "^6.7.7",
