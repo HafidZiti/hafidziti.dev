@@ -33,7 +33,7 @@
     "@chakra-ui/theme-tools": "2.0.5",
     "@emotion/react": "11.10.0",
     "@emotion/styled": "11.10.0",
-    "chart.js": "^3.8.2",
+    "chart.js": "^3.9.1",
     "framer-motion": "^6.5.1",
     "hamburger-react": "^2.5.0",
     "next": "latest",
