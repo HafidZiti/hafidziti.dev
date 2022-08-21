@@ -28,7 +28,7 @@
     "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
-    "@chakra-ui/icons": "^2.0.6",
+    "@chakra-ui/icons": "^2.0.8",
     "@chakra-ui/react": "^2.2.8",
     "@chakra-ui/theme-tools": "2.0.5",
     "@emotion/react": "11.10.0",
