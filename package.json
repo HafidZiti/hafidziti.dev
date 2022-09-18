@@ -31,7 +31,7 @@
     "@chakra-ui/icons": "^2.0.8",
     "@chakra-ui/react": "^2.3.2",
     "@chakra-ui/theme-tools": "2.0.5",
-    "@emotion/react": "11.10.0",
+    "@emotion/react": "11.10.4",
     "@emotion/styled": "11.10.0",
     "chart.js": "^3.9.1",
     "framer-motion": "^7.2.0",
