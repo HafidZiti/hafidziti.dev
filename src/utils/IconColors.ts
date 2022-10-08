@@ -47,4 +47,11 @@ export const iconColors = {
   framer: "#0055ff",
   npm: "#cb3837",
   yarn: "#2c8ebb",
+  storybook: "#ff4785",
+  "rxjs/ngrx": "#b7178c",
+  bitbucket: "#0052cc",
+  jira: "#0052cc",
+  confluence: "#172b4d",
+  weblate: "#2eccaa",
+  material: "#757575",
 };

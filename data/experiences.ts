@@ -29,6 +29,13 @@ import {
   SiVisualstudiocode,
   SiKibana,
   SiNodered,
+  SiStorybook,
+  SiJira,
+  SiConfluence,
+  SiReactivex,
+  SiBitbucket,
+  SiWeblate,
+  SiMaterialdesign,
 } from "react-icons/si";
 import { Experience } from "../src/types/experience";
 
@@ -44,6 +51,32 @@ export const dailyTasks = [
 ];
 
 export const experiences: Experience[] = [
+  {
+    title: "Angular 13 developer",
+    customer: "EATON",
+    description:
+      "I’ve joined the team as Angular developer, to contribute to development of the software that manages the UPSs (Uninterruptible Power Supply), my main role was to develop new features for the new version.",
+    image: "eaton.svg",
+    period: "June, 2022 – Present",
+    colors: ["#000", "blue"],
+    technologies: [
+      { name: "Angular", Icon: SiAngular },
+      { name: "Typescript", Icon: SiTypescript },
+      { name: "HTML5", Icon: SiHtml5 },
+      { name: "CSS3", Icon: SiCss3 },
+      { name: "Material", Icon: SiMaterialdesign },
+      { name: "RxJS/NgRx", Icon: SiReactivex },
+      { name: "Git", Icon: SiGit },
+      { name: "Storybook", Icon: SiStorybook },
+      { name: "ESlint", Icon: SiEslint },
+      { name: "Prettier", Icon: SiPrettier },
+      { name: "Bitbucket", Icon: SiBitbucket },
+      { name: "Jira", Icon: SiJira },
+      { name: "Confluence", Icon: SiConfluence },
+      { name: "Weblate", Icon: SiWeblate },
+      { name: "VSCode", Icon: SiVisualstudiocode },
+    ],
+  },
   {
     title: "React.js developer",
     customer: "IBM",
