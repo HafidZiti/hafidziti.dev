@@ -30,6 +30,11 @@ import {
   SiFramer,
   SiNpm,
   SiYarn,
+  SiReactivex,
+  SiStorybook,
+  SiBitbucket,
+  SiWeblate,
+  SiJira,
 } from "react-icons/si";
 
 export const mainSkills = [
@@ -72,6 +77,7 @@ export const skills = [
   { name: "Angular", Icon: SiAngular },
   { name: "Next.js", Icon: SiNextdotjs },
   { name: "Redux", Icon: SiRedux },
+  { name: "RxJS/NgRx", Icon: SiReactivex },
   { name: "Apollo GraphQL", Icon: SiApollographql },
   { name: "Javascript", Icon: SiJavascript },
   { name: "Typescript", Icon: SiTypescript },
@@ -82,6 +88,7 @@ export const skills = [
   { name: "EsLint", Icon: SiEslint },
   { name: "Prettier", Icon: SiPrettier },
   { name: "Styled-components", Icon: SiStyledcomponents },
+  { name: "Storybook", Icon: SiStorybook },
   { name: "Chakra UI", Icon: SiChakraui },
   { name: "Jest", Icon: SiJest },
   { name: "Testing Library", Icon: SiTestinglibrary },
@@ -89,6 +96,9 @@ export const skills = [
   { name: "Git", Icon: SiGit },
   { name: "GitHub", Icon: SiGithub },
   { name: "GitLab", Icon: SiGitlab },
+  { name: "Bitbucket", Icon: SiBitbucket },
+  { name: "Weblate", Icon: SiWeblate },
+  { name: "Jira", Icon: SiJira },
   { name: "Npm", Icon: SiNpm },
   { name: "Yarn", Icon: SiYarn },
   { name: "Vercel", Icon: SiVercel },
