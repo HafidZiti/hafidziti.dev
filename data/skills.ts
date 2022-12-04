@@ -48,27 +48,27 @@ export const mainSkills = [
   },
   {
     name: "Angular2+",
-    level: 80,
+    level: 85,
   },
   {
     name: "Next.js",
     level: 85,
   },
   {
-    name: "Node.js",
-    level: 70,
+    name: "Design",
+    level: 80,
   },
   {
-    name: "Communication",
-    level: 90,
+    name: "Testing",
+    level: 80,
   },
   {
     name: "Code Review",
-    level: 100,
+    level: 95,
   },
   {
     name: "Typescript",
-    level: 80,
+    level: 85,
   },
 ];
 
