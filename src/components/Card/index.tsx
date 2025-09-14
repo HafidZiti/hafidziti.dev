@@ -43,12 +43,13 @@ export const Card: React.FC<Props> = ({
 }: Props) => {
   return (
     <motion.div
+      style={{ height: "100%" }}
       initial={{ scale: 0.5 }}
       whileInView={{ scale: 1 }}
       animate={{ transition: { type: "spring", duration: 0.1 } }}
       // viewport={{ once: true }}
     >
-      <Center py={6} w={"full"}>
+      <Center py={6} w={"full"} h={"100%"}>
         <Flex
           maxW={"400px"}
           w={"100%"}

@@ -44,7 +44,7 @@ export const mainSkills = [
   },
   {
     name: "React.js",
-    level: 90,
+    level: 95,
   },
   {
     name: "Angular2+",
@@ -52,7 +52,7 @@ export const mainSkills = [
   },
   {
     name: "Next.js",
-    level: 85,
+    level: 95,
   },
   {
     name: "Design",
@@ -60,7 +60,7 @@ export const mainSkills = [
   },
   {
     name: "Testing",
-    level: 80,
+    level: 90,
   },
   {
     name: "Code Review",
@@ -68,14 +68,14 @@ export const mainSkills = [
   },
   {
     name: "Typescript",
-    level: 85,
+    level: 90,
   },
 ];
 
 export const skills = [
+  { name: "Next.js", Icon: SiNextdotjs },
   { name: "React.js", Icon: SiReact },
   { name: "Angular", Icon: SiAngular },
-  { name: "Next.js", Icon: SiNextdotjs },
   { name: "Redux", Icon: SiRedux },
   { name: "RxJS/NgRx", Icon: SiReactivex },
   { name: "Apollo GraphQL", Icon: SiApollographql },

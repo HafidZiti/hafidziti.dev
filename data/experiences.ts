@@ -36,6 +36,9 @@ import {
   SiBitbucket,
   SiWeblate,
   SiMaterialdesign,
+  SiChakraui,
+  SiFigma,
+  SiNextdotjs,
 } from "react-icons/si";
 import { Experience } from "../src/types/experience";
 
@@ -52,12 +55,38 @@ export const dailyTasks = [
 
 export const experiences: Experience[] = [
   {
+    title: "React.js | Next.js developer",
+    customer: "OPTISANTIS",
+    description:
+      "I've joined the team as a React.js developer, contributing to the creation of innovative applications in the insurance and provident sectors. My role was to develop high-impact features that enhanced both performance and user experience.",
+    image: "optisantis.svg",
+    period: "March, 2023 – Present",
+    colors: ["#000", "blue"],
+    technologies: [
+      { name: "Next.js", Icon: SiNextdotjs },
+      { name: "React.js", Icon: SiReact },
+      { name: "Typescript", Icon: SiTypescript },
+      { name: "HTML5", Icon: SiHtml5 },
+      { name: "CSS3", Icon: SiCss3 },
+      { name: "Chakra UI", Icon: SiChakraui },
+      { name: "Git", Icon: SiGit },
+      { name: "Storybook", Icon: SiStorybook },
+      { name: "ESlint", Icon: SiEslint },
+      { name: "Prettier", Icon: SiPrettier },
+      { name: "GitLab", Icon: SiGitlab },
+      { name: "Jira", Icon: SiJira },
+      { name: "Confluence", Icon: SiConfluence },
+      { name: "Figma", Icon: SiFigma },
+      { name: "VSCode", Icon: SiVisualstudiocode },
+    ],
+  },
+  {
     title: "Angular 13 developer",
     customer: "EATON",
     description:
       "I’ve joined the team as Angular developer, to contribute to development of the software that manages the UPSs (Uninterruptible Power Supply), my main role was to develop new features for the new version.",
     image: "eaton.svg",
-    period: "June, 2022 – Present",
+    period: "June, 2022 – January, 2023 7 months",
     colors: ["#000", "blue"],
     technologies: [
       { name: "Angular", Icon: SiAngular },
