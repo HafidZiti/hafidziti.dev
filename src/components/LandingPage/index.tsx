@@ -59,6 +59,8 @@ export const LandingPage: React.FC<LandingPageProps> = (
             ? "/background-dark.png"
             : "/background-white.png"
         }
+        bgSize="cover"
+        bgPosition="center"
         bgRepeat="no-repeat"
       >
         <Container pt={{ base: 20, sm: 36 }} pb={28} maxW="6xl" centerContent>

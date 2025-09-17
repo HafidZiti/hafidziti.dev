@@ -10,7 +10,9 @@ export const About: React.FC<aboutProps> = (props: aboutProps) => {
       <Heading size={"xl"} textAlign={"left"}>
         {"About me"}
       </Heading>
-      <Text mt={5}>{props.content}</Text>
+      <Text mt={5} whiteSpace="pre-line">
+        {props.content}
+      </Text>
     </>
   );
 };

@@ -45,11 +45,15 @@ export const Projects: React.FC<ProjectsProps> = (props: ProjectsProps) => {
           ))}
         </Box>
       </motion.div>
-      <SimpleGrid columns={[1, 2, 3]} spacingX={12}>
+      <SimpleGrid
+        columns={[1, 2, 3]}
+        spacingX={12}
+        gridAutoRows="minmax(537px, 1fr)"
+      >
         {experiences.map((exp: Experience, index: number) => {
           const minHeight = index > 2 ? 537 : 614;
           return (
-            <GridItem key={index}>
+            <GridItem key={index} h="100%">
               <Card experience={exp} minHeight={minHeight} />
             </GridItem>
           );
