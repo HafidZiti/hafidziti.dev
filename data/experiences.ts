@@ -205,22 +205,4 @@ export const experiences: Experience[] = [
       { name: "VSCode", Icon: SiVisualstudiocode },
     ],
   },
-  {
-    title: "Angular 5 developer - Internship",
-    customer: "Orange",
-    description:
-      "It's the internship of my master's degree in computer engineering, in which I developed a user-friendly web application that uses Tuleap's API and allows users to submit and track their requests regarding Orange equipments.",
-    image: "orange.svg",
-    period: "April, 2018 – September, 2018 - 6 months ",
-    colors: ["#000", "blue"],
-    technologies: [
-      { name: "Angular", Icon: SiAngular },
-      { name: "Typescript", Icon: SiTypescript },
-      { name: "HTML5", Icon: SiHtml5 },
-      { name: "CSS3", Icon: SiCss3 },
-      { name: "Git", Icon: SiGit },
-      { name: "VSCode", Icon: SiVisualstudiocode },
-      // { name: "angular material", Icon: },
-    ],
-  },
 ];
