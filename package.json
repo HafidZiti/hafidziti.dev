@@ -65,6 +65,7 @@
   "resolutions": {
     "cross-spawn": "^7.0.5",
     "@babel/runtime": "^7.26.10",
-    "brace-expansion": "^1.1.12"
+    "brace-expansion": "^1.1.12",
+    "minimatch": "^3.1.3"
   }
 }
