@@ -22,13 +22,12 @@ async function handler(req, res) {
       ${req.body.email}</p>`,
     };
 
-    transporter.sendMail(mailData, function (err) {
-      if (err) {
-        res.status(400).send(); // something went wrong
-      } else {
-        res.status(200).send(); // successfully sent
-      }
-    });
+    try {
+      await transporter.sendMail(mailData);
+      res.status(200).send(); // successfully sent
+    } catch {
+      res.status(400).send(); // something went wrong
+    }
   }
 }
 
