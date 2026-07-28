@@ -43,26 +43,27 @@ import {
 import { Experience } from "../src/types/experience";
 
 export const dailyTasks = [
-  "Setting up codebases",
-  "Code refacto",
-  "Code review",
-  "Setting up front-end architecture",
-  "Coming up with seggetions",
-  "Write e2e & unit tests",
-  "Write documentation",
-  "Self-Taught",
+  "Mobile & Web Architecture",
+  "React Native / Expo Development",
+  "Performance Optimization",
+  "Code Review & Quality",
+  "Design System Implementation",
+  "Accessibility (RGAA)",
+  "SEO Optimization",
+  "CI/CD & App Store Publishing",
 ];
 
 export const experiences: Experience[] = [
   {
-    title: "React.js | Next.js developer",
+    title: "Senior Front-End Developer (React.js | Next.js | React Native)",
     customer: "OPTISANTIS",
     description:
-      "I've joined the team as a React.js developer, contributing to the creation of innovative applications in the insurance and provident sectors. My role was to develop high-impact features that enhanced both performance and user experience.",
+      "Joined the team as a Senior Front-End Developer to lead the development and evolution of health and wellness platforms deployed at scale. My role spans both web (Next.js) and mobile (React Native) development, with a strong focus on architecture, performance, accessibility, and code quality.",
     image: "optisantis.svg",
-    period: "March, 2023 – Present",
+    period: "March, 2023 – April, 2026 - 38 months",
     colors: ["#000", "blue"],
     technologies: [
+      { name: "React Native", Icon: SiReact },
       { name: "Next.js", Icon: SiNextdotjs },
       { name: "React.js", Icon: SiReact },
       { name: "Typescript", Icon: SiTypescript },
