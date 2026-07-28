@@ -50,6 +50,7 @@ export const ContactForm: React.FC = () => {
   const recaptchaRef = useRef(null);
 
   const [captchaError, setCaptchaError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const toast = useToast();
 
@@ -73,6 +74,7 @@ export const ContactForm: React.FC = () => {
       return;
     }
 
+    setIsLoading(true);
     fetch("/api/contact", {
       method: "POST",
       headers: {
@@ -80,15 +82,20 @@ export const ContactForm: React.FC = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-    }).then((res: Response) => {
-      if (res.status === 200) {
-        _renderToast("Your message has been successfully sent.", "success");
-        reset();
-        recaptchaRef.current.reset();
-      } else {
-        _renderToast("Sorry, something went wrong. Please try again.", "error");
-      }
-    });
+    })
+      .then((res: Response) => {
+        if (res.status === 200) {
+          _renderToast("Your message has been successfully sent.", "success");
+          reset();
+          recaptchaRef.current.reset();
+        } else {
+          _renderToast(
+            "Sorry, something went wrong. Please try again.",
+            "error"
+          );
+        }
+      })
+      .finally(() => setIsLoading(false));
   };
 
   return (
@@ -168,6 +175,8 @@ export const ContactForm: React.FC = () => {
             bg: "blue.500",
           }}
           type="submit"
+          isLoading={isLoading}
+          loadingText="Sending..."
         >
           Send Message
         </Button>
