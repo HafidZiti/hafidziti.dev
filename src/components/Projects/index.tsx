@@ -20,7 +20,7 @@ export const Projects: React.FC<ProjectsProps> = (props: ProjectsProps) => {
   return (
     <>
       <Heading size={"xl"} textAlign={"left"}>
-        Projects
+        Professional Projects
       </Heading>
       {/* Fixme */}
       <Text mt={5}>

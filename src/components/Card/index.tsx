@@ -13,8 +13,8 @@ import {
   Wrap,
   WrapItem,
   Link,
-  Spacer,
   TagLeftIcon,
+  Icon,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import {
@@ -22,10 +22,13 @@ import {
   Technology,
 } from "../../types/experience";
 import { iconColors } from "../../utils/IconColors";
+import { SiAppstore, SiGoogleplay } from "react-icons/si";
 
 type Props = {
   experience: ExperienceType;
   minHeight: number;
+  appStoreLink?: string;
+  playStoreLink?: string;
 };
 
 export const Card: React.FC<Props> = ({
@@ -35,19 +38,22 @@ export const Card: React.FC<Props> = ({
     image,
     description,
     period,
-    colors,
+    colors = ["blue.400", "purple.500"],
     technologies,
     link,
   },
   minHeight,
+  appStoreLink,
+  playStoreLink,
 }: Props) => {
+  const isPersonal = !period;
+
   return (
     <motion.div
       style={{ height: "100%" }}
       initial={{ scale: 0.5 }}
       whileInView={{ scale: 1 }}
       animate={{ transition: { type: "spring", duration: 0.1 } }}
-      // viewport={{ once: true }}
     >
       <Center py={6} w={"full"} h={"100%"}>
         <Flex
@@ -66,7 +72,7 @@ export const Card: React.FC<Props> = ({
             <Center
               h={"100px"}
               w={"full"}
-              bgGradient={`linear(to-r, ${colors[0]}, ${colors[1]})`}
+              bgGradient={`linear(to-l, ${colors[0]}, ${colors[1]})`}
             />
             <Flex justify={"center"} mt={-12}>
               <Avatar
@@ -82,20 +88,27 @@ export const Card: React.FC<Props> = ({
             <Box py={3} px={4}>
               <Stack spacing={0} mb={3}>
                 <Heading
-                  as="i"
-                  fontSize={"lg"}
-                  fontWeight={500}
+                  as={isPersonal ? undefined : "i"}
+                  fontSize={isPersonal ? "2xl" : "lg"}
+                  fontWeight={isPersonal ? 600 : 500}
                   fontFamily={"body"}
+                  color={
+                    isPersonal
+                      ? useColorModeValue("gray.800", "white")
+                      : undefined
+                  }
                 >
                   {title}
                 </Heading>
-                <Text as="i" fontSize={"xs"} color={"gray.500"}>
-                  {period}
-                </Text>
+                {period && (
+                  <Text as="i" fontSize={"xs"} color={"gray.500"}>
+                    {period}
+                  </Text>
+                )}
                 <Text
                   fontSize={"sm"}
                   color={useColorModeValue("gray.800", "white")}
-                  pt={1}
+                  pt={isPersonal ? 3 : 1}
                 >
                   {description}
                 </Text>
@@ -121,16 +134,46 @@ export const Card: React.FC<Props> = ({
               </Wrap>
             </Box>
           </Box>
-          {link && (
-            <Flex align={"self-end"} alignSelf="flex-end" py={3} px={4}>
-              <Spacer />
-              <Box>
-                <Link href={link} isExternal>
-                  <Text fontSize="sm" color={"blue.400"}>
-                    Take a look <ExternalLinkIcon />
-                  </Text>
+
+          {(link || appStoreLink || playStoreLink) && (
+            <Flex
+              align={"center"}
+              alignSelf="flex-end"
+              py={3}
+              px={4}
+              gap={4}
+              w="full"
+              justifyContent="flex-end"
+            >
+              {link && (
+                <Box>
+                  <Link href={link} isExternal>
+                    <Text fontSize="sm" color={"blue.400"}>
+                      Take a look <ExternalLinkIcon />
+                    </Text>
+                  </Link>
+                </Box>
+              )}
+              {appStoreLink && (
+                <Link href={appStoreLink} isExternal>
+                  <Flex align="center" gap={1}>
+                    <Icon as={SiAppstore} color="#0D96F6" />
+                    <Text fontSize="sm" color={"blue.400"}>
+                      App Store <ExternalLinkIcon />
+                    </Text>
+                  </Flex>
                 </Link>
-              </Box>
+              )}
+              {playStoreLink && (
+                <Link href={playStoreLink} isExternal>
+                  <Flex align="center" gap={1}>
+                    <Icon as={SiGoogleplay} color="#34A853" />
+                    <Text fontSize="sm" color={"blue.400"}>
+                      Play Store <ExternalLinkIcon />
+                    </Text>
+                  </Flex>
+                </Link>
+              )}
             </Flex>
           )}
         </Flex>

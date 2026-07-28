@@ -8,8 +8,10 @@ import { Quote } from "../components/Quote";
 import { Contact } from "../components/Contact";
 import { About } from "../components/about";
 import { Projects } from "../components/Projects";
+import { PersonalProjects } from "../components/PersonalProjects";
 import { HowIsBuilt } from "../components/HowIsBuilt";
 import { dailyTasks, experiences } from "../../data/experiences";
+import { personalProjects } from "../../data/personalProjects";
 import bio from "../../data/bio.json";
 import howIsBuilt from "../../data/howIsBuilt.json";
 import links from "../../data/links.json";
@@ -33,6 +35,11 @@ const Index: React.FC = () => {
               dailyTasks={dailyTasks}
             ></Projects>
           </Box>
+          {process.env.NEXT_PUBLIC_SHOW_PERSONAL_PROJECTS === "true" && (
+            <Box id="personal-projects" mt={12}>
+              <PersonalProjects projects={personalProjects} />
+            </Box>
+          )}
           <Box id="skills" width={"100%"} mt={12}>
             <Skills skills={skills} mainSkills={mainSkills} />
           </Box>
