@@ -60,7 +60,7 @@ export const experiences: Experience[] = [
     description:
       "Joined the team as a Senior Front-End Developer to lead the development and evolution of health and wellness platforms deployed at scale. My role spans both web (Next.js) and mobile (React Native) development, with a strong focus on architecture, performance, accessibility, and code quality.",
     image: "optisantis.svg",
-    period: "March, 2023 – April, 2026 - 38 months",
+    period: "March, 2023 – Present",
     colors: ["#000", "blue"],
     technologies: [
       { name: "React Native", Icon: SiReact },
